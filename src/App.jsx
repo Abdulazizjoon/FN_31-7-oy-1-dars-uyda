@@ -4,6 +4,7 @@ function App() {
   const [time, setTime] = useState(25); 
   const [second, setSecond] = useState(0); 
   const [start, setStart] = useState(false); 
+  let [minut,setminut]=useState(0)
 
   useEffect(() => {
     let interval;
@@ -29,7 +30,10 @@ function App() {
   }
   function reset() {
     setSecond(0)
-    setTime(25)
+    setTime(minut)
+  }
+  function editminut() {
+    setTime(minut)
   }
   return (
     <div className="container">
@@ -39,6 +43,17 @@ function App() {
       <div className="flex">
         <button onClick={btn}>{start ? "STOP" : "START"}</button>
         <button onClick={reset}>reset</button>
+      </div>
+      <p>Edit data</p>
+      <div className="edit">
+        <input
+          type="text"
+          placeholder="minutti kiriting"
+          onChange={(e) => {
+            setminut(e.target.value);
+          }}
+        />
+        <button onClick={editminut}>save</button>
       </div>
     </div>
   );

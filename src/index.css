@@ -25,3 +25,13 @@ body{
     background-color: rgb(186, 73, 73);
     color: white;
 }
+.edit{
+    display: flex;
+    gap: 20px;
+    margin-left:-50px;
+    margin-top: 30px;
+    *{
+        padding: 10px 20px;
+        margin-left: 5px;
+    }
+}
