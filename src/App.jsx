@@ -48,7 +48,7 @@ function App() {
       <div className="edit">
         <input
           type="text"
-          placeholder="minutti kiriting"
+          placeholder="minutni kiriting"
           onChange={(e) => {
             setminut(e.target.value);
           }}
